@@ -33,8 +33,11 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Secp256k1_web3wallet"
+        ),
+        .target(
             name: "web3swift",
-            dependencies: ["BigInt","secp256k1", "PromiseKit", "Starscream", "CryptoSwift"],
+            dependencies: ["BigInt","Secp256k1_web3wallet", "PromiseKit", "Starscream", "CryptoSwift"],
             exclude: excludeFiles,
             resources: [
                 .copy("./Browser/browser.js"),

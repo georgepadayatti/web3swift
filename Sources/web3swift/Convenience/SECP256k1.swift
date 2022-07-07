@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import secp256k1
+import Secp256k1_web3wallet
 
 public struct SECP256K1 {
     public struct UnmarshaledSignature{

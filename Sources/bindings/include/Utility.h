@@ -9,7 +9,7 @@
 //
 
 #include "./secp256k1.h"
-#include "../../secp256k1/src/hash_impl.h"
+#include "../secp256k1/src/hash_impl.h"
 
 /// Exposes secp256k1 memczero implementation to the bindings target
 /// @param s  pointer to an array to be zero'd by the function
