@@ -34,7 +34,7 @@ let package = Package(
     targets: [
         .target(
             name: "web3swift",
-            dependencies: ["BigInt","PromiseKit", "Starscream", "CryptoSwift"],
+            dependencies: ["BigInt","secp256k1", "PromiseKit", "Starscream", "CryptoSwift"],
             exclude: excludeFiles,
             resources: [
                 .copy("./Browser/browser.js"),
