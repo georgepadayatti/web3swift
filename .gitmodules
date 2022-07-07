@@ -7,3 +7,6 @@
 [submodule "Sources/bindings/secp256k1"]
 	path = Sources/bindings/secp256k1
 	url = https://github.com/bitcoin-core/secp256k1
+[submodule "secp256k1"]
+	path = secp256k1
+	url = /Users/mohamedrebink/Documents/Rebin's Workspace/iGrant/iOS/iGrant_other/web3swift/Sources/bindings/secp256k1
