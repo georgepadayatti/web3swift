@@ -19,18 +19,19 @@ let package = Package(
     products: [
         .library(name: "web3swift", targets: ["web3swift"])
     ],
-
+    
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.3.0"),
         .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.16.2"),
         .package(url: "https://github.com/daltoniam/Starscream.git", from: "4.0.4"),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.5.1")
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.5.1"),
+        .package(url: "https://github.com/GigaBitcoin/secp256k1.swift.git", from: "0.7.0")
     ],
     targets: [
-        .target(name: "web3wallet_secp256k1"),
         .target(
             name: "web3swift",
-            dependencies: ["BigInt", "web3wallet_secp256k1", "PromiseKit", "Starscream", "CryptoSwift"],
+            dependencies: ["BigInt", "PromiseKit", "Starscream", "CryptoSwift",
+                           .product(name: "secp256k1",package: "secp256k1.swift") ],
             exclude: excludeFiles,
             resources: [
                 .copy("./Browser/browser.js"),
