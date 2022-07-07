@@ -18,12 +18,6 @@ let package = Package(
     ],
     products: [
         .library(name: "web3swift", targets: ["web3swift"]),
-        .library(
-            name: "secp256k1",
-            targets: [
-                "secp256k1"
-            ]
-        )
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.3.0"),
@@ -33,11 +27,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Secp256k1_web3wallet"
-        ),
-        .target(
             name: "web3swift",
-            dependencies: ["BigInt","Secp256k1_web3wallet", "PromiseKit", "Starscream", "CryptoSwift"],
+            dependencies: ["BigInt", "secp256k1", "PromiseKit", "Starscream", "CryptoSwift"],
             exclude: excludeFiles,
             resources: [
                 .copy("./Browser/browser.js"),
